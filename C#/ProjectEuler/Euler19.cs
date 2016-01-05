@@ -20,10 +20,10 @@ namespace ProjectEuler
         public int dayOfTheMonth = 1;
         public int numberOfStartingSundays = -2;
 
-        public override string ReturnAnswer()
+        protected override void CalculateAnswer()
         {
             CalculateNumberOfStartingSundays();
-            return String.Format("Total number of months starting with a sunday is {0}", numberOfStartingSundays);
+            Answer = String.Format("Total number of months starting with a sunday is {0}", numberOfStartingSundays);
         }
 
         public void CalculateNumberOfStartingSundays()

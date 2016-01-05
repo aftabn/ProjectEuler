@@ -8,13 +8,19 @@ namespace ProjectEuler
 {
     public class Program
     {
+        private static void PrintSolution(Problem problem)
+        {
+            Console.Out.WriteLine(String.Format("Problem {0}: {1}", problem.ProblemNumber, problem.ProblemName));
+            Console.Out.WriteLine(problem.GetAnswer());
+            Console.Out.WriteLine(String.Format("Problem took {0:0.####}s to run", problem.RunTimeInSeconds));
+            Console.ReadLine();
+        }
+
         private static void Main(string[] args)
         {
-            Euler19 problem = new Euler19();
+            var problem = new Euler1();
 
-            Console.Out.WriteLine(String.Format("Problem {0}: {1}", problem.ProblemNumber, problem.ProblemName));
-            Console.Out.WriteLine(problem.ReturnAnswer());
-            Console.ReadLine();
+            PrintSolution(problem);
         }
     }
 }

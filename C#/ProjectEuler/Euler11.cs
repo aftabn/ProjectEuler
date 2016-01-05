@@ -127,12 +127,12 @@ namespace ProjectEuler
             return product;
         }
 
-        public override string ReturnAnswer()
+        protected override void CalculateAnswer()
         {
             CheckRowsAndColumns();
             CheckForwardDiagonals();
             CheckBackwardDiagonals();
-            return String.Format("The largest product is {0}", currentHighestProduct);
+            Answer = String.Format("The largest product is {0}", currentHighestProduct);
         }
 
         //Conditions:

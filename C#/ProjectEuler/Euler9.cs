@@ -14,7 +14,7 @@ namespace ProjectEuler
             ProblemNumber = 9;
         }
 
-        public override string ReturnAnswer()
+        protected override void CalculateAnswer()
         {
             int a = 0, b = 0, c = 0;
             int s = 1000;
@@ -26,11 +26,11 @@ namespace ProjectEuler
 
                     if (a * a + b * b == c * c)
                     {
-                        return String.Format("Answer is {0}", a * b * c);
+                        Answer = String.Format("Answer is {0}", a * b * c);
                     }
                 }
             }
-            return "No solution found";
+            Answer = "No solution found";
         }
     }
 }

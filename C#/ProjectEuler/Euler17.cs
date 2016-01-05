@@ -49,14 +49,14 @@ namespace ProjectEuler
             }
         }
 
-        public override string ReturnAnswer()
+        protected override void CalculateAnswer()
         {
             for (int i = 1; i <= 1000; i++)
             {
                 numberOfLetters += ProcessNumber(i);
             }
 
-            return String.Format("Total number of letters is: {0}", numberOfLetters);
+            Answer = String.Format("Total number of letters is: {0}", numberOfLetters);
         }
     }
 }
